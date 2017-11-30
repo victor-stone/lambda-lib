@@ -1,0 +1,28 @@
+{
+  "name": "lambda-lib",
+  "version": "1.0.0",
+  "description": "wrapper and helpers for aws lambda functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-stone/lambda-lib.git"
+  },
+  "keywords": [
+    "lambda",
+    "aws"
+  ],
+  "author": "Victor Stone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victor-stone/lambda-lib/issues"
+  },
+  "homepage": "https://github.com/victor-stone/lambda-lib#readme",
+  "dependencies": {
+    "aws-sdk": "^2.157.0",
+    "node-getopt": "^0.2.3"
+  },
+  "bin": { "gen-lamba-clients": "./bin/genclients.js" }
+}
