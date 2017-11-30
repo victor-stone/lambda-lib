@@ -41,12 +41,14 @@ const Getopt = require('node-getopt');
 function genLambdaClient() {
   const getopt = new Getopt([
     ['s', 'srcdir=dir', 'directory to parse'],
-    ['d', 'destdir=dir', 'directory to put generated client code']['h', 'help', 'this help']
+    ['d', 'destdir=dir', 'directory to put generated client code'],
+    ['h', 'help', 'this help']
   ]).bindHelp();
   const opt = getopt.parseSystem();
   const { options: { srcdir, destdir } } = opt;
   if (!srcdir || !destdir) {
     getopt.showHelp();
+    process.exit(-1);
   }
   
   const srcdir   = path.join(srcdir,'/');
